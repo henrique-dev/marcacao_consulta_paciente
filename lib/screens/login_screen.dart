@@ -79,33 +79,70 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Text("CPF"),
+                            Padding(
+                              padding: EdgeInsets.only(top: 10, bottom: 10),
+                            ),
                             TextField(
-                              keyboardType: TextInputType.numberWithOptions(decimal: false, signed: false),
-                              decoration: InputDecoration(
-                                fillColor: Colors.redAccent
-                              ),
+                              keyboardType: TextInputType.phone,
+                              cursorColor: Colors.black,
+                              controller: _cpfTextEditingController,
                               inputFormatters: [
                                 MaskTextInputFormatter(
                                     mask: "### ### ### ##", filter: { "#": RegExp(r'[0-9]') }
                                 )
                               ],
-                              controller: _cpfTextEditingController,
-                              toolbarOptions: ToolbarOptions(
-                                paste: true
+                              decoration: InputDecoration(
+                                labelText: "CPF",
+                                labelStyle: TextStyle(color: Colors.black),
+                                contentPadding: EdgeInsets.only(left: 10, right: 10),
+                                hoverColor: Colors.black,
+                                filled: true,
+                                fillColor: Colors.white,
+                                floatingLabelBehavior: FloatingLabelBehavior.auto,
+                                prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
+                                ),
+                                focusedBorder:  OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
+                                ),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(top: 10, bottom: 10),
+                              padding: EdgeInsets.only(top: 10),
                             ),
-                            Text("Senha"),
                             TextField(
-                              keyboardType: TextInputType.text,
-                              obscureText: true,
+                              keyboardType: TextInputType.phone,
+                              cursorColor: Colors.black,
                               controller: _passwordTextEditingController,
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                labelText: "Senha",
+                                labelStyle: TextStyle(color: Colors.black),
+                                contentPadding: EdgeInsets.only(left: 10, right: 10),
+                                hoverColor: Colors.black,
+                                filled: true,
+                                fillColor: Colors.white,
+                                floatingLabelBehavior: FloatingLabelBehavior.auto,
+                                prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
+                                ),
+                                focusedBorder:  OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
+                                ),
+                              ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(top: 20),
+                              padding: EdgeInsets.only(top: 10),
                             ),
                             RaisedButton(
                               onPressed: loginOnPressed,

@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:marcacao_consulta_paciente/connection/connection.dart';
+import 'package:marcacao_consulta_paciente/screens/search_screen.dart';
 
 class SpecialitiesScreen extends StatefulWidget {
   @override
@@ -62,7 +63,12 @@ class _SpecialitiesScreenState extends State<SpecialitiesScreen> {
                                 ],
                               ),
                               onTap: (){
-
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => SearchScreen(jsonDecoded[index]["speciality"]["id"])
+                                    )
+                                );
                               },
                             ),
                           );

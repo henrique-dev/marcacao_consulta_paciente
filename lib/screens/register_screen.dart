@@ -63,7 +63,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Text("Nome completo"),
                       TextField(
                         keyboardType: TextInputType.text,
                         controller: _textEditingControllerName,
@@ -74,6 +73,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "name";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Nome completo",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["name"]["v"],
@@ -82,7 +101,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                       ),
-                      Text("CPF"),
                       TextField(
                         keyboardType: TextInputType.number,
                         controller: _textEditingControllerCpf,
@@ -95,6 +113,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "cpf";
                         },
+                        decoration: InputDecoration(
+                          labelText: "CPF",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["cpf"]["v"],
@@ -103,7 +141,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                       ),
-                      Text("Data de  nascimento"),
                       TextField(
                         keyboardType: TextInputType.datetime,
                         controller: _textEditingControllerBirthDate,
@@ -116,6 +153,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "birthdate";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Data nascimento",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["birthdate"]["v"],
@@ -175,7 +232,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                       ),
-                      Text("Altura (metros)"),
                       TextField(
                         keyboardType: TextInputType.phone,
                         controller: _textEditingControllerHeight,
@@ -186,6 +242,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "height";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Altura (metros)",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["height"]["v"],
@@ -194,7 +270,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                       ),
-                      Text("Peso (quilos)"),
                       TextField(
                         keyboardType: TextInputType.phone,
                         controller: _textEditingControllerWeight,
@@ -205,6 +280,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "weight";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Peso (quilos)",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["weight"]["v"],
@@ -213,7 +308,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                       ),
-                      Text("Tipo sanguíneo"),
                       TextField(
                         keyboardType: TextInputType.text,
                         controller: _textEditingControllerBloodType,
@@ -224,6 +318,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "bloodtype";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Tipo sanguíneo",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["bloodtype"]["v"],
@@ -232,7 +346,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                       ),
-                      Text("Celular"),
                       TextField(
                         keyboardType: TextInputType.number,
                         controller: _textEditingControllerTelephone,
@@ -245,6 +358,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "telephone";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Celular",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["telephone"]["v"],
@@ -253,7 +386,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                       ),
-                      Text("E-mail"),
                       TextField(
                         keyboardType: TextInputType.emailAddress,
                         controller: _textEditingControllerEmail,
@@ -264,6 +396,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "email";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Email",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["email"]["v"],
@@ -272,7 +424,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 20),
                       ),
-                      Text("Senha"),
                       TextField(
                         keyboardType: TextInputType.visiblePassword,
                         controller: _textEditingControllerPassword,
@@ -284,6 +435,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "password";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Senha",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["password"]["v"],
@@ -292,7 +463,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                       ),
-                      Text("Repita a senha"),
                       TextField(
                         keyboardType: TextInputType.visiblePassword,
                         controller: _textEditingControllerPasswordConfirm,
@@ -304,6 +474,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           validateSpecificField(_lastElement);
                           _lastElement = "password_confirm";
                         },
+                        decoration: InputDecoration(
+                          labelText: "Confirme a senha",
+                          labelStyle: TextStyle(color: Colors.black),
+                          contentPadding: EdgeInsets.only(left: 10, right: 10),
+                          hoverColor: Colors.black,
+                          filled: true,
+                          fillColor: Colors.white,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          prefixStyle: TextStyle(color: Colors.black, fontSize: 16),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                          focusedBorder:  OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.black
+                              )
+                          ),
+                        ),
                       ),
                       Visibility(
                         visible: errors["password_confirm"]["v"],

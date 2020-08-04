@@ -5,8 +5,8 @@ import 'package:marcacao_consulta_paciente/config/constants.dart';
 
 class HttpConnection {
 
-  static final String host = "http://192.168.1.128:3000/";
-  //static final String host = "http://headred.com.br/";
+  //static final String host = "http://192.168.1.128:3000/";
+  static final String host = "http://headred.com.br/";
 
   static Future<dynamic> get(String path, {Function callBack, Function posCallBack,
     Map<String, String> headers}) async {
