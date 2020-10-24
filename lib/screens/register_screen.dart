@@ -543,7 +543,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   void registerUserCallBack(Response response) {
     Map<String, dynamic> jsonDecoded = json.decode(response.body);
-    Navigator.of(_keyLoader.currentContext,rootNavigator: true).pop();
+    Navigator.of(_keyLoader.currentContext, rootNavigator: true).pop();
     switch (response.statusCode) {
       case 200 :
         Navigator.pop(context, "register_success");

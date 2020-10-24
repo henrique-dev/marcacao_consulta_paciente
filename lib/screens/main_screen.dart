@@ -5,10 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:marcacao_consulta_paciente/config/constants.dart';
 import 'package:marcacao_consulta_paciente/connection/connection.dart';
-import 'package:marcacao_consulta_paciente/connection/http_connection.dart';
-import 'package:marcacao_consulta_paciente/models/Speciality.dart';
-import 'package:marcacao_consulta_paciente/models/medic_profile.dart';
-import 'package:marcacao_consulta_paciente/models/user.dart';
 import 'package:marcacao_consulta_paciente/screens/profile_screen.dart';
 import 'package:marcacao_consulta_paciente/screens/scheduling_details_screen.dart';
 import 'package:marcacao_consulta_paciente/screens/scheduling_historic_screen.dart';
@@ -50,7 +46,6 @@ class _MainScreenState extends State<MainScreen> {
 
     List<Widget> screens = [
       Container(
-
           child: ListView(
             children: [
               Card(
@@ -279,8 +274,8 @@ class _MainScreenState extends State<MainScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Menu Principal"),
-        backgroundColor: Colors.black45
+        title: Text("DIRETÓRIO"),
+        backgroundColor: Colors.red
       ),
       body: screens[_currentBottomNavigationBarIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -297,16 +292,20 @@ class _MainScreenState extends State<MainScreen> {
         selectedItemColor: Colors.redAccent,
         items: [
           BottomNavigationBarItem(
-            title: Text("Perfil"),
-            icon: Icon(Icons.account_circle)
+            title: Text("Home"),
+            icon: Icon(Icons.home)
           ),
           BottomNavigationBarItem(
-            title: Text("Agendamentos"),
-            icon: Icon(Icons.add_alarm),
+            title: Text("Agenda"),
+            icon: Icon(Icons.calendar_today),
           ),
           BottomNavigationBarItem(
-            title: Text("Buscar"),
-            icon: Icon(Icons.search),
+            title: Text("Suporte"),
+            icon: Icon(Icons.chat),
+          ),
+          BottomNavigationBarItem(
+            title: Text("Conta"),
+            icon: Icon(Icons.account_circle),
           )
         ],
       ),
